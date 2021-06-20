@@ -1,0 +1,1185 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+html {
+    --pink:rgb(245,152,160);
+    --gray:rgb(0,0,0);
+    --lightgray:rgb(252,252,252);
+    scroll-behavior: smooth;
+    max-width: 1920px;
+    margin:0 auto;
+    overflow-x: hidden;
+    
+   
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+  /* End of Scrollbar */
+
+
+
+
+
+/* START OF HEADER */
+
+header {
+
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--gray);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    z-index: -1;
+    opacity: 1;
+    background-position:top;
+    background-repeat: no-repeat;
+}
+
+.inner_header {
+
+    width: 95%;
+    height: 90vh;
+    border:1px solid rgb(59,59,59);
+    background-position:center;
+    background-repeat: no-repeat;
+    
+    
+    
+}
+
+.inner_header img {
+
+    position: absolute;
+    bottom:0;
+    left:50%;
+    transform: translate(-50%,0);
+    
+}
+
+.motto {
+
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    z-index: 2;
+}
+
+.motto p:first-child {
+
+    font-family: 'Frank Ruhl Libre', serif;
+    font-size: 66px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.motto p:last-child {
+
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 82px;
+    color: var(--pink);
+    text-transform: uppercase;
+}
+
+.icons {
+
+    position: absolute;
+    bottom: 0;
+    left:50%;
+    transform: translate(-50%,0);
+    text-align: center;
+    color: var(--pink);
+    height:10vh ;
+    line-height: 10vh;
+    font-size: 28px;
+    background-color: transparent;
+    padding: 0 20px;
+    letter-spacing: 6px;
+    z-index: 3;
+}
+
+.icons i {
+
+    transition: transform .6s;
+    cursor: pointer;
+}
+
+
+
+nav {
+
+    position: fixed;
+    top:0;
+    left:50%;
+    transform: translate(-400px,0);
+    height: 10vh;
+    width: 800px;
+    background-color: var(--gray);
+    transition: .1s;
+}
+
+nav ul {
+
+    list-style: none;
+    width: 100%;
+    height: 100%;
+    max-width: 800px;
+    margin:0 auto;
+}
+
+nav li {
+
+    float: left;
+    height: 100%;
+    width: calc(100% / 7);
+}
+
+.m1 {
+
+    color: var(--pink);
+}
+
+nav a {
+
+    position: relative;
+    top:50%;
+    transform: translate(0, -50%);
+    display: block;
+    width: 100%;
+    height: 5vh;
+    line-height: 5vh;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 12px;
+    transition: color .4s;
+    
+}
+
+ul li:nth-child(4) {
+
+    color: white;
+    line-height: 10vh;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Frank Ruhl Libre', serif;
+    font-size: 28px;
+    letter-spacing: 1px;;
+    
+}
+
+nav a:hover {
+
+    color:var(--pink)
+}
+/* MENU FIXED */
+.menufixed {     
+
+    position: fixed;
+    top:0;
+    left:0;
+    height: 10vh;
+    width: 100%;
+    transform: translate(0,0);
+    opacity: 1;
+    z-index: 3;
+}
+
+.icons i:hover {
+
+    transform: rotate(140deg);
+}
+
+.fa-long-arrow-alt-right {
+
+    display: block;
+    position: absolute;
+    top:50%;
+    right:5%;
+    font-size: 40px;
+    color:  white;
+    transition: .4s;
+    transform: translate(0,-50%);
+    cursor: pointer;
+    z-index: 2;
+
+}
+
+.fa-long-arrow-alt-left {
+
+    display: block;
+    position: absolute;
+    top:50%;
+    left:5%;
+    font-size: 40px;
+    color: white;
+    transition: .4s;
+    transform: translate(0,-50%);
+    cursor: pointer;
+    z-index: 2;
+}
+
+.fa-long-arrow-alt-right:hover {
+
+    color: var(--pink);
+    
+}
+
+.fa-long-arrow-alt-left:hover {
+
+    color: var(--pink);
+    
+}
+
+
+
+
+/* END OF HEADER */
+
+
+/* START OF SERVICES */
+
+.services {
+
+    margin-top:100vh;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--lightgray);
+    overflow: hidden;
+    position: relative;
+}
+
+.services .paragraph {
+
+    position: absolute;
+    top:50%;
+    left:35%;
+    transform: translate(-50%,-50%);
+    line-height: 100vh;
+    font-size: 550px;
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+    text-shadow: 2px 0px 30px rgba(150, 150, 150, 0.02); 
+    z-index: 0;
+    
+    
+}
+
+.section_content {
+
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    z-index: 2;
+    
+}
+
+
+.section_content_text {
+
+    position: relative;
+    left:0;
+    text-align: center;
+    padding-top: 185px;
+    opacity: 1;
+    transition: .8s;
+    
+}
+
+.section_content_text_invisible {
+
+    position: relative;
+    left:-200px;
+    opacity: 0;
+}
+
+.section_content_text p:first-child {
+
+    font-family:'Josefin Sans', sans-serif;
+    color:var(--pink);
+    font-size: 32px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    
+}
+
+.section_content_text p:last-child {
+
+    font-family:'Frank Ruhl Libre', serif;
+    color:black;
+    font-size: 42px;
+    max-width: 600px;
+    margin:0 auto;
+}
+
+
+.section_content_gallery {
+
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 1200px;
+    margin:0 auto;
+    margin-top: 120px;
+    opacity: 1;
+    transition:2s .2s ;
+
+
+}
+
+.section_content_gallery_invisible {
+
+    opacity:0;
+}
+
+
+.section_content_gallery div {
+
+    position: relative;
+    width: 350px;
+    height: 350px;
+    background-color: var(--pink);
+    text-align: center;
+}
+
+.section_content_gallery div p {
+
+    font-family:'Josefin Sans', sans-serif; 
+    line-height: 350px;
+    color: white;
+    text-transform: uppercase;
+    font-size: 18px;
+    
+}
+
+#wedding,
+#events,
+#parties {
+
+    position: absolute;
+    top:0;
+    left:0;
+    width: 350px;
+    height: 350px;
+    transition: 1s;
+
+}
+
+#wedding {
+
+    background-image: url("weddings.png");
+    transition: .6s;
+}
+
+#events {
+
+    background-image: url("events.png");
+}
+
+#parties {
+
+    background-image: url("shows.png");
+}
+
+#wedding:hover {
+
+    cursor: pointer;
+    opacity: 0.1;
+}
+
+#events:hover {
+
+    cursor: pointer;
+    opacity: 0.1;
+}
+
+#parties:hover {
+
+    cursor: pointer;
+    opacity: 0.1;
+}
+/* END OF SERVICES */
+
+
+
+
+/* START OF ALBUMS */
+
+.albums {
+
+    width: 100%;
+    height: 100vh;
+    background-color: var(--lightgray);
+    position: relative;
+    overflow: hidden;
+}
+
+
+
+.albums .paragraph {
+
+    position: absolute;
+    top:50%;
+    right:50%;
+    transform: translate(50%,-50%);
+    line-height: 100vh;
+    font-size: 550px;
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+    text-shadow: 2px 0px 30px rgba(150, 150, 150, 0.02); 
+    z-index: 0;
+}
+
+.albums_content {
+
+    position: relative;
+    top:55%;
+    left:0;
+    transform: translate(0,-50%);
+    height: 80%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.albums_content_left {
+
+    position: relative;
+    left:0;
+    width: 50%;
+    height: 40%;
+    text-align: right;
+    padding-right: 200px;
+    opacity: 1;
+    transition: .8s;
+}
+
+.albums_content_left_invisible {
+
+    position: relative;
+    left: -200px;
+    opacity: 0;
+
+}
+
+.albums_content_left p:first-child {
+
+    font-family:'Josefin Sans', sans-serif;
+    color:var(--pink);
+    font-size: 32px;
+    margin-bottom: 20px;
+    text-transform: uppercase;    
+}
+
+.albums_content_left p:nth-child(2) {
+
+    font-family:'Frank Ruhl Libre', serif;
+    color:black;
+    font-size: 42px;
+    margin-left: 250px;
+    margin-bottom: 40px;
+    
+
+}
+
+.albums_content_left button {
+
+    width: 170px;
+    height: 55px;
+    background-image: url("buttonbg.png");
+    background-position: left;
+    border: none;
+    font-family:'Josefin Sans', sans-serif;
+    color: white;
+    text-transform: uppercase;
+    box-sizing: border-box;
+    transition: .8s;
+    letter-spacing: 1px;
+    cursor: pointer;
+    font-size: 14px;
+    background-repeat: no-repeat;
+    background-origin: content-box;
+    
+}
+
+.albums_content_left button:hover {
+
+    background-position: right;
+}
+
+
+.albums_content_right {
+
+   position: relative;
+   left: 0;
+    opacity: 1;
+    transition: opacity 2s, left .8s;
+}
+
+.albums_content_right_invisible {
+
+    position: relative;
+    left: 200px;
+    opacity: 0;
+    
+}
+
+
+
+
+/* START OF SHOP */
+
+
+.shop {
+
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--lightgray);
+    overflow: hidden;
+}
+
+.shop .paragraph {
+
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    line-height: 100vh;
+    font-size: 550px;
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+    text-shadow: 2px 0px 30px rgba(150, 150, 150, 0.02); 
+    z-index: 0;
+}
+
+
+
+.shop_text {
+position: relative;
+left:0;
+text-align: center;
+padding-top: 150px;
+opacity: 1;
+transition: .8s;
+
+}
+
+.shop_text_invisible {
+
+    position: relative;
+    left:-200px;
+    opacity: 0;
+}
+
+
+.shop_text p:first-child {
+
+    font-family:'Josefin Sans', sans-serif;
+    color:var(--pink);
+    font-size: 32px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    
+}
+
+.shop_text p:last-child {
+
+    font-family:'Frank Ruhl Libre', serif;
+    color:black;
+    font-size: 42px;
+    max-width: 600px;
+    margin:0 auto;
+}
+.shop_content {
+
+    position: relative;
+    margin-top: 30px;
+    opacity:1;
+    transition:  2s .3s;
+}
+
+.shop_content_invisilbe {
+
+    opacity: 0;
+}
+.shop_content_buttons {
+
+    width: 400px;
+    margin:0 auto;
+    text-align: center;
+}
+
+.shop_content_buttons button {
+
+    width: 30%;
+    border: none;
+    height: 40px;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-family:'Josefin Sans', sans-serif;
+    cursor: pointer;
+    line-height: 40px;
+    transition: .4s;
+    
+}
+
+.active_btn {
+
+    color: white;
+    background-color: var(--pink);
+}
+
+.b1:hover,
+.b2:hover,
+.b3:hover {
+
+    color: white;
+    background-color: var(--pink);
+}
+
+.shop_content_box {
+
+    width: 900px;
+    margin:0 auto;
+    height: 55vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content:space-between;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    
+}
+
+.shop_content_box div {
+
+    width: 240px;
+    height: 240px;
+    cursor: pointer;
+}
+
+.shop_content_box div:nth-of-type(1) {
+
+    background-image: url("nature1.jpg");
+}
+
+.shop_content_box div:nth-of-type(2) {
+
+    background-image: url("nature2.jpg");
+}
+
+.shop_content_box div:nth-of-type(3) {
+
+    background-image: url("nature3.jpg");
+}
+
+.shop_content_box div:nth-of-type(4) {
+
+    background-image: url("nature4.jpg");
+}
+
+.shop_content_box div:nth-of-type(5) {
+
+    background-image: url("nature5.jpg");
+}
+
+.shop_content_box div:nth-of-type(6) {
+
+    background-image: url("nature6.jpg");
+}
+
+/* END OF ALBUMS */
+
+
+/* START OF ABOUTME */
+
+.about {
+
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--lightgray);
+    overflow: hidden;
+
+}
+
+.about .paragraph {
+
+    position: absolute;
+    top:50%;
+    right:50%;
+    transform: translate(50%,-50%);
+    line-height: 100vh;
+    font-size: 550px;
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+    text-shadow: 2px 0px 30px rgba(150, 150, 150, 0.02); 
+    z-index: 0;
+}
+
+.about_content {
+
+    position: relative;
+    top:55%;
+    left:0;
+    transform: translate(0,-50%);
+    height: 80%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.about_text_right {
+
+    position: relative;
+    left:0;
+    width: 50%;
+    height: 40%;
+    text-align: left;
+    padding-left: 200px;
+    opacity: 1;
+    transition: .8s;
+}
+
+.about_text_right_invisible {
+
+    position: relative;
+    left: 200px;
+    opacity: 0;
+
+}
+
+.about_text_right p:first-child {
+
+    font-family:'Josefin Sans', sans-serif;
+    color:var(--pink);
+    font-size: 32px;
+    margin-bottom: 20px;
+    text-transform: uppercase;    
+}
+
+.about_text_right p:nth-child(2) {
+
+    font-family:'Frank Ruhl Libre', serif;
+    color:black;
+    font-size: 42px;
+    margin-right: 250px;
+    margin-bottom: 40px;
+    
+
+}
+
+.about_text_right button {
+
+    width: 170px;
+    height: 55px;
+    background-image: url("buttonbg.png");
+    background-position: left;
+    border: none;
+    font-family:'Josefin Sans', sans-serif;
+    color: white;
+    text-transform: uppercase;
+    box-sizing: border-box;
+    transition: .8s;
+    letter-spacing: 1px;
+    cursor: pointer;
+    font-size: 14px;
+    background-repeat: no-repeat;
+    background-origin: content-box;
+    
+}
+
+.about_text_right button:hover {
+
+    background-position: right;
+}
+
+
+.about_content_left {
+
+    position: relative;
+    left: 0;
+     opacity: 1;
+     transition: opacity 2s, left .8s;
+ }
+
+ .about_content_left_invisible {
+
+    position: relative;
+    left: -200px;
+    opacity: 0;
+    
+}
+
+/* END OF ABOUTME */
+
+
+/* START OF CONTACTS */
+
+
+.contact {
+
+    width: 100%;
+    height: 100vh;
+    background-color: var(--lightgray);
+    position: relative;
+    overflow: hidden;
+}
+
+
+
+.contact .paragraph {
+
+    position: absolute;
+    top:50%;
+    left:35%;
+    transform: translate(-50%,-50%);
+    line-height: 100vh;
+    font-size: 550px;
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+    text-shadow: 2px 0px 30px rgba(150, 150, 150, 0.02); 
+    z-index: 0;
+}
+
+.contact_content {
+
+    position: relative;
+    top:55%;
+    left:0;
+    transform: translate(0,-50%);
+    height: 80%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.contact_content_left {
+
+    position: relative;
+    left:0;
+    width: 50%;
+    height: 40%;
+    text-align: right;
+    padding-right: 200px;
+    opacity: 1;
+    transition: .8s;
+}
+
+.contact_content_left_invisible {
+
+    position: relative;
+    left: -200px;
+    opacity: 0;
+
+}
+
+.contact_content_left p:first-child {
+
+    font-family:'Josefin Sans', sans-serif;
+    color:var(--pink);
+    font-size: 32px;
+    margin-bottom: 20px;
+    text-transform: uppercase;    
+}
+
+.contact_content_left p:nth-child(2) {
+
+    font-family:'Frank Ruhl Libre', serif;
+    color:black;
+    font-size: 42px;
+    margin-left: 250px;
+    margin-bottom: 40px;
+    
+
+}
+
+.contact_content_left button {
+
+    width: 170px;
+    height: 55px;
+    background-image: url("buttonbg.png");
+    background-position: left;
+    border: none;
+    font-family:'Josefin Sans', sans-serif;
+    color: white;
+    text-transform: uppercase;
+    box-sizing: border-box;
+    transition: .8s;
+    letter-spacing: 1px;
+    cursor: pointer;
+    font-size: 14px;
+    background-repeat: no-repeat;
+    background-origin: content-box;
+    
+}
+
+.contact_content_left button:hover {
+
+    background-position: right;
+}
+
+
+.contact_content_right {
+
+   position: relative;
+   left: 0;
+    opacity: 1;
+    transition: opacity 2s, left .8s;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 900px;
+    height: 675px;
+    background-color: var(--pink);
+}
+
+.contact_content_right_invisible {
+
+    position: relative;
+    left: 200px;
+    opacity: 0;
+
+    
+}
+
+
+.inner {
+
+    width: 600px;
+    height: 500px;
+    color: white;
+    
+}
+
+.inner div {
+
+    height: 33.333%;
+    padding-top: 60px;
+}
+
+.inner div:nth-of-type(2) {
+
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+}
+
+.inner div p:first-child {
+
+    font-family: 'Josefin Sans', sans-serif;
+    text-transform: uppercase;
+}
+
+.inner div p:last-child {
+
+    font-family: 'Frank Ruhl Libre', serif;
+    font-size: 32px;
+}
+
+/* END OF CONTACT */
+
+/* START OF FOOTER */
+
+footer {
+
+    background-color: black;
+    height: 16vh;
+}
+.footer_icons {
+
+    height: 8vh;
+    text-align: center;
+    color: white;
+    line-height: 8vh;
+    font-size: 40px;
+    letter-spacing: 8px;
+}
+
+.footer_copyright {
+   
+    height: 8vh;
+    text-align: center;
+    color: white;
+    line-height: 8vh;
+    font-size: 18px;
+    font-family: 'Frank Ruhl Libre', serif;
+    
+
+}
+
+
+
+
+
+
+/* START OF POPUP */
+
+.popup {
+
+    position: fixed;
+    width: 100%;
+    top:0;
+    left:0;
+    height: 100vh;
+    z-index: 6;
+    background-color: rgba(0, 0, 0,0.9);
+    display: block;
+    
+    
+}
+
+.popup_inner {
+
+   padding-top: 140px;
+    width: 750px;
+    height: 40vh;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    background-color: black;
+    box-sizing: border-box;
+    
+    
+}
+
+.popup_inner p {
+
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    font-size: 28px;
+    font-family:'Josefin Sans', sans-serif;
+    text-transform: uppercase;
+    color: white;
+    line-height: 150%;
+    
+    
+}
+
+.ok,
+.cancel {
+
+    position: absolute;
+    width: 50.00%;
+    height: 20%;
+    background-color: black;
+    text-align: center;
+    line-height: 8vh;
+    font-family:'Josefin Sans', sans-serif;
+    font-size: 24px;
+    cursor: pointer;
+    transition: .4s;
+   color: white;
+}
+
+.ok {
+    left:0;
+    bottom:0;
+    
+    
+    
+}
+
+.cancel {
+    left:50%;
+    bottom:0
+    
+}
+
+.ok:hover,
+.cancel:hover {
+
+    background-color:var(--pink);
+    color: white;
+}
+
+.popup_invisible {
+
+    display: none;
+}
+
+.clip {
+    position: absolute;
+    clip-path: polygon(0 0, 0 20%, 12% 0);
+    top:0;
+    left: 0;
+    background-color: var(--pink);
+    width: 100%;
+    height: 100%;
+    z-index: 4;
+}
+
+.alert {
+
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top:5%;
+    right:5%;
+    font-size: 42px;
+    text-align: center;
+    color: var(--pink);
+    line-height: 50px;
+
+    
+}
+
+
+
+
+
+
+
+
